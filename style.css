@@ -1,0 +1,138 @@
+body {
+background: red ;
+color: black;
+    margin: 150;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: red;
+}
+
+.card {
+background:url('img/ethereum-donativo-tarjeta-navidad-caridad.jpg') ;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+.copos {
+    position: absolute;
+    top: 5;
+    left: 5;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Permitir clics en los elementos debajo */
+    z-index: 1;
+}
+
+.title {
+    font-size: 4.8rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message {
+font-size: 3rem;
+    margin-bottom: 40px;
+    color: red
+}
+
+.estrella{font-size: 100px; animation:  colores 1s infinite;}
+.arbol{
+    color:red;
+    transition: all 1.5s;
+    font-size: 30px;
+} 
+.rojo{
+    color: red;
+        transition: all 1.5s;
+        font-size: 30px;
+    }
+
+
+@keyframes colores {
+    0%{color: red;}
+    25%{color:  yellow;}
+    50%{color: green;}
+    75%{color: blue;}
+    100%{color: red;}
+}
+.rojo{
+    animation: colores 2s infinite;
+}
+
+footer {
+    font-size: 3rem;
+        color: red;
+}
+.copo {
+    position: absolute;
+    top: -10px;
+    /* Empieza justo encima del contenedor */
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: caer 5s linear infinite;
+    /* Animación de caída */
+}
+
+#snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+/* Estilo de los copos de nieve */
+.copo {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: caer 5s linear infinite;
+    /* Animación de caída */
+}
+
+/* Animación para los copos */
+@keyframes caer {
+    0% {
+        transform: translateY(10vh);
+        /* Empieza fuera de la vista */
+    }
+
+    100% {
+        transform: translateY(150vh);
+        /* Cae hasta la parte inferior */
+    }
+
+
+}
